@@ -13,7 +13,6 @@ client.send(name.encode('utf-8'))
 
 key = input('Enter password: ')
 client.send(key.encode('utf-8'))
-
 class Encryptor:
 	def encrypt(self, text, key):
 		password = hashlib.sha256(key.encode())
@@ -29,7 +28,6 @@ Encr = Encryptor()
 def liss():
 	while True:
 		listen = client.recv(1024).decode('utf-8')
-		with open('test.txt', 'w') as file: file.write(listen)
 		if listen[0:4] == 'User':
 			print(f'\r{listen}\n{name}: ', end='')
 		else:
