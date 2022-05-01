@@ -3,7 +3,7 @@ import threading
 import json
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind(('139.28.222.90', 2000))
+server.bind(('127.0.0.1', 2000))
 server.listen(4)
 
 rooms = {}
