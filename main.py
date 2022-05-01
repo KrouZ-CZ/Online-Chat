@@ -49,7 +49,7 @@ encr = Encryptor()
 class Chat:
     def __init__(self) -> None:
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.client.connect(('139.28.222.90', 2000))
+        self.client.connect(('127.0.0.1', 2000))
     def init(self, why):
         self.login = values['login']
         if why == 'Create':
